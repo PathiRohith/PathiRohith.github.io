@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohith Pathi — AI/ML Engineer</title>
+<meta name="description" content="Rohith Pathi — AI/ML Engineer specializing in Agentic AI, LLMs, RAG architectures, MLOps, and cloud-native machine learning platforms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF;
+  --surface:#F7F9FC;
+  --ink:#0F1B2D;
+  --muted:#4B5A6E;
+  --line:#DCE3EB;
+  --accent:#1A56DB;
+  --accent-dark:#123C99;
+  --accent-soft:#EDF2FD;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:'IBM Plex Sans',sans-serif;font-size:16px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--accent-soft)}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* ---------- nav ---------- */
+nav{
+  position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1040px;margin:0 auto}
+.brand{font-weight:700;font-size:1.05rem;text-decoration:none;letter-spacing:-.01em}
+.brand span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-links a{text-decoration:none;font-size:.92rem;font-weight:500;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{
+  background:var(--accent);color:#fff!important;padding:9px 18px;border-radius:6px;
+  font-weight:600;transition:background .2s;
+}
+.nav-cta:hover{background:var(--accent-dark)}
+
+/* ---------- hero ---------- */
+header{padding:96px 0 72px;border-bottom:1px solid var(--line)}
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent);font-weight:500;
+  display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--accent)}
+h1{
+  font-size:clamp(2.3rem,5.5vw,3.5rem);font-weight:700;letter-spacing:-.025em;
+  line-height:1.12;margin-bottom:18px;max-width:760px;
+}
+.hero-sub{font-size:1.12rem;color:var(--muted);max-width:640px;margin-bottom:32px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;text-decoration:none;
+  font-weight:600;font-size:.94rem;padding:12px 22px;border-radius:6px;
+  border:1px solid var(--line);transition:all .2s;
+}
+.btn svg{width:17px;height:17px;flex:none}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+.btn-ghost{background:var(--bg);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink)}
+.stats{display:flex;gap:0;margin-top:52px;border:1px solid var(--line);border-radius:8px;overflow:hidden;max-width:720px}
+.stat{flex:1;padding:18px 22px;border-right:1px solid var(--line);background:var(--surface)}
+.stat:last-child{border-right:none}
+.stat b{display:block;font-size:1.35rem;font-weight:700;letter-spacing:-.01em}
+.stat small{color:var(--muted);font-size:.83rem}
+
+/* ---------- sections ---------- */
+section{padding:80px 0}
+.section-head{margin-bottom:44px;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.section-head h2{font-size:clamp(1.6rem,3.5vw,2.1rem);font-weight:700;letter-spacing:-.02em;margin-top:8px}
+.section-head .lede{color:var(--muted);max-width:560px;margin-top:10px;font-size:.98rem}
+.head-link{font-size:.9rem;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
+.head-link:hover{text-decoration:underline}
+
+/* ---------- projects ---------- */
+#projects{background:var(--surface);border-bottom:1px solid var(--line)}
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.project{
+  background:var(--bg);border:1px solid var(--line);border-radius:10px;
+  padding:30px;display:flex;flex-direction:column;gap:14px;
+  transition:box-shadow .2s,border-color .2s,transform .2s;
+}
+.project:hover{border-color:#B9C6D8;box-shadow:0 8px 28px rgba(15,27,45,.08);transform:translateY(-2px)}
+.featured{grid-column:1 / -1}
+.p-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.p-kicker{
+  font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--accent);font-weight:500;
+}
+.p-badge{
+  font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  background:var(--accent-soft);color:var(--accent-dark);
+  padding:4px 10px;border-radius:4px;
+}
+.project h3{font-size:1.3rem;font-weight:700;letter-spacing:-.01em}
+.project p{color:var(--muted);font-size:.95rem;flex:1}
+.featured .cols{display:grid;grid-template-columns:1.5fr 1fr;gap:28px;align-items:start}
+.pipeline{
+  background:var(--surface);border:1px solid var(--line);border-radius:8px;
+  padding:18px 20px;font-family:'IBM Plex Mono',monospace;font-size:.76rem;line-height:2.1;
+  color:var(--muted);
+}
+.pipeline b{color:var(--accent);font-weight:500}
+.pipeline .pl-title{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);display:block;margin-bottom:6px;font-weight:500}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tags span{
+  font-family:'IBM Plex Mono',monospace;font-size:.73rem;color:var(--muted);
+  border:1px solid var(--line);border-radius:4px;padding:3px 9px;background:var(--surface);
+}
+.p-links{display:flex;gap:18px;font-weight:600;font-size:.9rem;padding-top:4px}
+.p-links a{color:var(--accent);text-decoration:none}
+.p-links a:hover{text-decoration:underline}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:start}
+.about-text p{margin-bottom:16px;color:var(--muted)}
+.about-text p strong{color:var(--ink)}
+.pull-quote{
+  border-left:3px solid var(--accent);padding:2px 0 2px 18px;margin:24px 0;
+  font-weight:600;font-size:1.06rem;color:var(--ink);
+}
+.photo-frame{margin-bottom:28px}
+.photo-frame img{
+  width:100%;max-width:320px;display:block;border-radius:10px;
+  border:1px solid var(--line);aspect-ratio:1/1;object-fit:cover;
+}
+.skills-block{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.skills-block .sk-head{
+  background:var(--ink);color:#fff;padding:14px 22px;font-weight:600;font-size:.95rem;
+}
+.sk-group{padding:18px 22px;border-top:1px solid var(--line)}
+.sk-group:first-of-type{border-top:none}
+.sk-group h4{
+  font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:10px;font-weight:500;
+}
+.skill-tags{display:flex;flex-wrap:wrap;gap:7px}
+.skill-tags span{
+  font-size:.82rem;font-weight:500;border:1px solid var(--line);
+  border-radius:4px;padding:4px 11px;background:var(--surface);
+}
+
+/* ---------- contact ---------- */
+#contact{background:var(--ink);color:#fff}
+#contact .eyebrow{color:#8AB0F5}
+#contact .eyebrow::before{background:#8AB0F5}
+#contact h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:700;letter-spacing:-.02em;margin-bottom:14px}
+#contact p{color:#B7C3D4;max-width:520px;margin-bottom:32px}
+#contact .btn-ghost{background:transparent;color:#fff;border-color:#3A4A63}
+#contact .btn-ghost:hover{border-color:#fff}
+#contact .btn-primary{background:#fff;border-color:#fff;color:var(--ink)}
+#contact .btn-primary:hover{background:#E7EDF6}
+
+/* ---------- footer ---------- */
+footer{padding:28px 0;font-size:.85rem;color:var(--muted);display:flex;justify-content:center}
+
+/* ---------- responsive ---------- */
+@media(max-width:860px){
+  .projects-grid{grid-template-columns:1fr}
+  .featured .cols{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .nav-links{display:none}
+  header{padding:64px 0 52px}
+  section{padding:56px 0}
+  .stats{flex-direction:column}
+  .stat{border-right:none;border-bottom:1px solid var(--line)}
+  .stat:last-child{border-bottom:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top">Rohith Pathi<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a class="nav-cta" href="#contact">Get in touch</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap">
+    <span class="eyebrow">AI/ML Engineer</span>
+    <h1>Building AI systems that move from experimentation to production.</h1>
+    <p class="hero-sub">I'm Rohith Pathi — an AI/ML Engineer specializing in Agentic AI, Large Language Models, RAG architectures, MLOps, and cloud-native machine learning platforms across fintech and enterprise technology.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="https://github.com/PathiRohith" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+        View GitHub
+      </a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/pathi-rohith-6p24r1246a/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        LinkedIn
+      </a>
+      <a class="btn btn-ghost" href="mailto:rohithpathi8@gmail.com">Email me</a>
+    </div>
+    <div class="stats" aria-label="Highlights">
+      <div class="stat"><b>4+ years</b><small>Fintech &amp; enterprise AI</small></div>
+      <div class="stat"><b>AWS · Azure · GCP</b><small>Cloud-native ML deployments</small></div>
+      <div class="stat"><b>Production-first</b><small>Agentic AI &amp; MLOps</small></div>
+    </div>
+  </div>
+</header>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Selected work</span>
+        <h2>Projects</h2>
+        <p class="lede">End-to-end AI systems covering retrieval pipelines, multi-agent orchestration, and human-in-the-loop automation.</p>
+      </div>
+      <a class="head-link" href="https://github.com/PathiRohith" target="_blank" rel="noopener">All repositories →</a>
+    </div>
+    <div class="projects-grid">
+
+      <article class="project featured">
+        <div class="p-meta">
+          <span class="p-kicker">Hybrid RAG · Clinical Data</span>
+          <span class="p-badge">Featured</span>
+        </div>
+        <h3>TrialMind</h3>
+        <div class="cols">
+          <div>
+            <p>An intelligent question-answering system built on ClinicalTrials.gov data. TrialMind fuses dense vector search with BM25 sparse retrieval via reciprocal rank fusion, reranks candidates with a cross-encoder model, and generates grounded answers with a local LLM. Designed to run <strong>fully offline</strong> using open-source HuggingFace models — no external API keys required.</p>
+            <div class="tags" style="margin:16px 0">
+              <span>Python</span><span>RAG</span><span>Hybrid Search (BM25 + Vector)</span><span>Reciprocal Rank Fusion</span><span>Cross-Encoder Reranking</span><span>Sentence Transformers</span><span>HuggingFace</span><span>Vector DB</span><span>Local LLM</span>
+            </div>
+            <div class="p-links">
+              <a href="https://github.com/PathiRohith/TrialMind-" target="_blank" rel="noopener">View code →</a>
+            </div>
+          </div>
+          <div class="pipeline" aria-label="TrialMind retrieval pipeline">
+            <span class="pl-title">Retrieval pipeline</span>
+            query<br>
+            &nbsp;├─ <b>dense</b> vector search<br>
+            &nbsp;└─ <b>sparse</b> BM25 search<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;↓ reciprocal rank fusion<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;↓ cross-encoder rerank<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;↓ local LLM → <b>answer</b>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="p-meta"><span class="p-kicker">Multi-Agent · LangGraph</span></div>
+        <h3>SalesOrbit</h3>
+        <p>A multi-agent AI system for B2B sales teams. Ingests prospect signals (LinkedIn roles, intent data), retrieves context from a dual-RAG knowledge base spanning text files and OCR-scanned business cards, scores each prospect with a rule-based, signal-aware engine, and recommends the best next action — orchestrated as a LangGraph state machine with a FastAPI backend for event-driven ingestion and a Streamlit UI for manual runs.</p>
+        <div class="tags"><span>Python</span><span>LangGraph</span><span>Multi-Agent</span><span>ChromaDB</span><span>Dual RAG</span><span>OCR</span><span>FastAPI</span><span>Streamlit</span><span>PyTorch</span><span>Docker</span><span>Kubernetes</span></div>
+        <div class="p-links">
+          <a href="https://github.com/PathiRohith/SalesOrbit" target="_blank" rel="noopener">View code →</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="p-meta"><span class="p-kicker">Human-in-the-Loop · Compliance</span></div>
+        <h3>ExpenseIQ</h3>
+        <p>Automates the review of employee expense receipts against company spending policy. Extracts text from PDFs, images, or text files, retrieves the most relevant policy sections from a vector knowledge base, and asks Gemini for a structured verdict — Compliant, Flagged, or Rejected — with confidence score, reasoning, and a cited policy quote. Managers can override AI verdicts with comments, a full audit trail lives in SQLite, and a built-in Policy Chat answers plain-English policy questions.</p>
+        <div class="tags"><span>Python</span><span>Gemini</span><span>LlamaIndex</span><span>ChromaDB</span><span>Sentence Transformers</span><span>PyMuPDF</span><span>Tesseract OCR</span><span>SQLite</span><span>Streamlit</span><span>Pydantic</span></div>
+        <div class="p-links">
+          <a href="https://github.com/PathiRohith/ExpenseIQ" target="_blank" rel="noopener">View code →</a>
+        </div>
+      </article>
+
+      <!-- ============================================================
+           TO ADD A NEW PROJECT IN THE FUTURE:
+           1. Copy the entire template below (from <article> to </article>)
+           2. Paste it above this comment
+           3. Replace the CAPITALIZED placeholders with your content
+           4. Delete or keep this template — it's invisible on the page
+
+      <article class="project">
+        <div class="p-meta"><span class="p-kicker">CATEGORY · KEY TECH</span></div>
+        <h3>PROJECT NAME</h3>
+        <p>ONE TO THREE SENTENCE DESCRIPTION: what it does, the problem
+           it solves, and what makes it technically interesting.</p>
+        <div class="tags"><span>TECH 1</span><span>TECH 2</span><span>TECH 3</span></div>
+        <div class="p-links">
+          <a href="https://github.com/PathiRohith/REPO-NAME" target="_blank" rel="noopener">View code →</a>
+        </div>
+      </article>
+
+           ============================================================ -->
+
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Background</span>
+        <h2>About</h2>
+      </div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p><strong>I'm an AI/ML Engineer passionate about building intelligent systems that move beyond experimentation into real-world production.</strong></p>
+        <p>With 4+ years of experience across fintech and enterprise technology, I specialize in Agentic AI, Large Language Models, RAG architectures, computer vision, MLOps, and cloud-native machine learning platforms. I've built multi-agent AI applications, fraud detection systems, KYC automation pipelines, predictive ML models, and scalable AI services deployed on AWS, Azure, and Google Cloud.</p>
+        <div class="pull-quote">Great AI isn't just about powerful models — it's about designing reliable systems that integrate seamlessly with enterprise applications and deliver measurable value.</div>
+        <p>That's the type of engineering I'm passionate about.</p>
+      </div>
+      <div>
+        <figure class="photo-frame">
+          <img src="profile.jpg" alt="Rohith Pathi" onerror="this.closest('.photo-frame').style.display='none'">
+        </figure>
+        <div class="skills-block">
+          <div class="sk-head">Core competencies</div>
+          <div class="sk-group">
+            <h4>AI / ML</h4>
+            <div class="skill-tags"><span>Agentic AI</span><span>LLMs</span><span>RAG</span><span>LangGraph</span><span>Computer Vision</span><span>PyTorch</span><span>HuggingFace</span></div>
+          </div>
+          <div class="sk-group">
+            <h4>Engineering</h4>
+            <div class="skill-tags"><span>Python</span><span>FastAPI</span><span>Streamlit</span><span>ChromaDB</span><span>SQLite</span><span>REST APIs</span></div>
+          </div>
+          <div class="sk-group">
+            <h4>Cloud &amp; MLOps</h4>
+            <div class="skill-tags"><span>AWS</span><span>Azure</span><span>GCP</span><span>Docker</span><span>Kubernetes</span><span>MLOps</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h2>Let's talk about production AI.</h2>
+    <p>Open to roles, collaborations, and conversations about building reliable AI systems for the enterprise.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="mailto:rohithpathi8@gmail.com">rohithpathi8@gmail.com</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/pathi-rohith-6p24r1246a/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Rohith Pathi
+</footer>
+
+</body>
+</html>
